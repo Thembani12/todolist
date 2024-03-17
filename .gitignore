@@ -1,0 +1,5 @@
+.venv/
+.git/
+todo/todo__pycache__/
+todo/lists/__pycache__/
+todo/lists/migrations/
