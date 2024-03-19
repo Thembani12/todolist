@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        
+        <title>{% block title %}CREATE TAG {% endblock %} </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
@@ -16,14 +16,15 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        {% block content %} 
+        {% if tag %} 
+        <h2>Your tag have been created</h2> 
         
-        
-        <form action="{% url 'create-list' %}" method="post">
-            {{ form.as_p }} 
-            {% csrf_token %} 
-           <p> <input type="submit" value="add list"></p>
-        </form>
-        <script src="" async defer></script>
-        
+        {% else %} 
+        {% include 'lists/todos/tag_form.html' %} 
+        {% endif %}
+        <p> <a href="{% url 'task-list' %}">Back To Menu</a></p>
+        {% endblock %}
+         <script src="" async defer></script>
     </body>
 </html>

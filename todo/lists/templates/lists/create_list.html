@@ -19,7 +19,7 @@
         {% block content %} 
         {% if list %} 
         <h2>Your list have been created</h2> 
-        <p><a href="{% url 'list:list_detail' list.id %}">list detail</a>"</p>
+        
         {% else %} 
         {% include 'lists/todos/list_form.html' %} 
         {% endif %}

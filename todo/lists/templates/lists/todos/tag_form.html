@@ -18,10 +18,10 @@
         <![endif]-->
         
         
-        <form action="{% url 'create-list' %}" method="post">
+        <form action="{% url 'create-tag' %}" method="post">
             {{ form.as_p }} 
             {% csrf_token %} 
-           <p> <input type="submit" value="add list"></p>
+           <p> <input type="submit" value="add tag"></p>
         </form>
         <script src="" async defer></script>
         

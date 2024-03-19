@@ -19,10 +19,11 @@
         {% block content %} 
         {% if task %} 
         <h2>YOUR TASK HAVE BEEN CREATED</h2>
-        <p><a href="{{ post.get_absolute_url }}">task details</a></p>
+        <p><a href="{{ task.get_absolute_url }}">task details</a></p>
         {% else %} 
         {% include 'lists/todos/task_form.html' %} 
         {% endif %} 
+        <p> <a href="{% url 'task-list' %}">Back To Menu</a></p>
         {% endblock %}
         <script src="" async defer></script>
     </body>

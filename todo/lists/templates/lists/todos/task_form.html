@@ -18,7 +18,7 @@
         <![endif]-->
          
         <h1>CREATE TASK</h1>
-        <form action="{% url 'list:create_task' %}" method="post">
+        <form action="{% url 'create-task' %}" method="post">
             {{ form.as_p }} 
             {% csrf_token %} 
             <input type="submit" value="Add task">

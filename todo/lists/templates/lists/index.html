@@ -41,6 +41,9 @@
             {{ task.notes|truncatewords:15|linebreaks }}
         {%  endif %}
         {% endfor %}
+        <p> <a href="{% url 'create-task' %}">Create Task</a></p>
+        <p> <a href="{% url 'create-list' %}">Create List</a></p>
+        <p> <a href="{% url 'create-tag' %}">Create Tag</a></p>
         <script src="" async defer></script>
         {% endblock %}
     </body>
